@@ -1,13 +1,17 @@
 import random
 import math
 
-x = random.random()
-y = random.random()
+iteration = 10
+total = 0
 
-dist = math.sqrt(x*x+y*y)
+for i in range(1,iteration):
+    x = random.random()
+    y = random.random()
+    dist = math.sqrt(x*x+y*y)
 
-print(dist)
+    if dist<=1:
+        total = total+1
 
-for i in range(1, 10):
-    print(i)
+pi = total / iteration *4
 
+print(pi)
